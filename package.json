@@ -1,0 +1,40 @@
+{
+  "name": "browser-pi",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Browser-first runtime for running pi coding agents with a VFS and js-shell.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev:demo": "pnpm --filter @browser-pi/demo dev",
+    "build": "tsc -p tsconfig.build.json",
+    "build:demo": "pnpm --filter @browser-pi/demo build",
+    "test": "vitest run",
+    "typecheck": "tsc -b"
+  },
+  "dependencies": {
+    "@browser-pi/js-shell": "workspace:*",
+    "typebox": "^1.0.55"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-agent-core": "^0.75.1",
+    "@earendil-works/pi-ai": "^0.75.1"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-agent-core": "^0.75.1",
+    "@earendil-works/pi-ai": "^0.75.1",
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
