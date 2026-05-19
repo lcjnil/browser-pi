@@ -12,11 +12,14 @@ It provides:
 
 ## Install
 
-```bash
-pnpm add browser-pi
-```
+`browser-pi` has not been published to npm yet. For now, clone this repository and build it locally:
 
-The runtime also depends on `@browser-pi/js-shell`, which supplies the browser-local shell implementation.
+```bash
+git clone <repo-url>
+cd browser-pi
+pnpm install
+pnpm build
+```
 
 ## Basic Usage
 
